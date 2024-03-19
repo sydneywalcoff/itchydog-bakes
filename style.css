@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -46,6 +47,8 @@ form .disclaimer {
     margin-bottom: 24px;
 }
 
+form .disclaimer span { font-size: 16px }
+
 form label {
     font-size: 24px;
     font-weight: bold;
@@ -60,7 +63,8 @@ form>div {
     margin-bottom: 32px;
 }
 
-form input {
+form input,
+form .dropdown-outer {
     height: 52px;
     border-radius: 70px;
     border: 2px solid var(--navy);
@@ -82,4 +86,111 @@ form textarea {
     border-radius: 40px;
     height: 164px;
     padding: 12px;
+}
+
+/* dropdown */
+form .dropdown-outer {
+    cursor: pointer;
+}
+form .dropdown-outer .selected .option {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+form .dropdown-outer .options,
+form .dropdown-outer hr {
+    display: none;
+}
+
+form .dropdown-outer .arrow {
+    width: 0;
+    height: 0;
+    margin-right: 4px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 20px solid var(--teal);
+}
+
+/* dropdown - open */
+form .dropdown-outer.open {
+    height: unset;
+    border-radius: 30px;
+}
+
+form .dropdown-outer.open .options {
+    display: block;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 30px;
+    padding: 4px;
+}
+
+form .dropdown-outer.open .option {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .dropdown-outer.open .option:hover { font-weight: 600; }
+
+form .dropdown-outer.open hr {
+    display: block;
+    height: 1px; 
+    background-color: #d9d9d9;
+    margin: 4px 12px;
+}
+
+form .dropdown-outer.open .selected .option{
+    height: 48px;
+    font-weight: 700;
+}
+
+form .dropdown-outer.open .selected .arrow {
+    transform: rotate(180deg);
+}
+
+/* smaller form text */
+form span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* radio btns */
+form .radio-btn-container {
+    padding: 0 24px;
+}
+
+form .radio-btn-container label {
+    display: flex;
+    flex-direction: column;
+}
+
+form .radio-btn-container .radio-btn {
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--navy);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+form .radio-btn-container .radio-btn.active::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    border: 8px solid var(--teal)
+}
+
+/* form error text */
+
+form .error {
+    color: #c60303;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 18px;
 }
