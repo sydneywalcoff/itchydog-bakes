@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItchyDog Bakes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -40,13 +42,24 @@
                         <label for="dropdown">
                             Quantity
                         </label>
-                        <div class="dropdown-outer" id="dropdown">
-
+                        <div class="dropdown-outer d-flex justify-content-between align-items-center" id="dropdown">
+                            <div class="selected">1 bag - 24 treats - $10</div>
+                            <div class="arrow"></div>
+                            <div class="options">
+                                <div class="option">1 bag - 24 treats - $10</div>
+                                <div class="option">2 bags - 48 treats - $10</div>
+                                <div class="option">3 bags - 72 treats - $10</div>
+                                <div class="option">4+ bags - 96+ treats </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="radio-btn-container d-flex">
+                        <label for="">Pickup <span>(in Echo Park)</span></label>
+                        <label for="">Shipping <span>(+$5)</span></label>
                     </div>
                     <div class="etc-container d-flex flex-column">
                         <label for="other-textbox">
-                            Anything Else? <span class="d-i">(any allergies, etc)</span>
+                            Anything else? <span class="d-i">(any allergies, etc)</span>
                         </label>
                         <textarea id="other-textbox"></textarea>
                     </div>
@@ -58,6 +71,9 @@
     <footer>
         <div class="contact"><img src="" alt=""></div>
     </footer>
-</body>=
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous">
+</script>
 </html>

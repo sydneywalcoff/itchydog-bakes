@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -60,7 +61,8 @@ form>div {
     margin-bottom: 32px;
 }
 
-form input {
+form input,
+form .dropdown-outer {
     height: 52px;
     border-radius: 70px;
     border: 2px solid var(--navy);
@@ -82,4 +84,37 @@ form textarea {
     border-radius: 40px;
     height: 164px;
     padding: 12px;
+}
+
+form .dropdown-outer {
+
+}
+
+form .dropdown-outer .selected {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+form .dropdown-outer .options {
+    display: none;
+}
+
+form .dropdown-outer .arrow {
+    width: 0;
+    height: 0;
+    margin-right: 4px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 20px solid var(--teal);
+}
+
+form span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+form .radio-btn-container label {
+    display: flex;
+    flex-direction: column;
 }
