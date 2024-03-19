@@ -88,12 +88,17 @@ form textarea {
     padding: 12px;
 }
 
-form .dropdown-outer .selected {
+/* dropdown */
+form .dropdown-outer {
+    cursor: pointer;
+}
+form .dropdown-outer .selected .option {
     font-weight: 500;
     font-size: 18px;
 }
 
-form .dropdown-outer .options {
+form .dropdown-outer .options,
+form .dropdown-outer hr {
     display: none;
 }
 
@@ -106,7 +111,46 @@ form .dropdown-outer .arrow {
     border-bottom: 20px solid var(--teal);
 }
 
-/* smaller font text */
+/* dropdown - open */
+form .dropdown-outer.open {
+    height: unset;
+    border-radius: 30px;
+}
+
+form .dropdown-outer.open .options {
+    display: block;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 30px;
+    padding: 4px;
+}
+
+form .dropdown-outer.open .option {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .dropdown-outer.open .option:hover { font-weight: 600; }
+
+form .dropdown-outer.open hr {
+    display: block;
+    height: 1px; 
+    background-color: #d9d9d9;
+    margin: 4px 12px;
+}
+
+form .dropdown-outer.open .selected .option{
+    height: 48px;
+    font-weight: 700;
+}
+
+form .dropdown-outer.open .selected .arrow {
+    transform: rotate(180deg);
+}
+
+/* smaller form text */
 form span {
     font-size: 24px;
     font-weight: 500;

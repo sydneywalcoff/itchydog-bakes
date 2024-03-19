@@ -2,8 +2,17 @@
 
 
 // dropdown functionality
+function toggleDropdown() {
     // arrow flips down
+    $('#dropdown').toggleClass('open')
+}
 
+function handleQtySelection() {
+    console.log($(this).text())
+}
+
+$('#dropdown').on('click', toggleDropdown);
+$('#dropdown .options .option').on('click', handleQtySelection)
 
 // radio btn functionality
 function handleRadioBtnChange() {
