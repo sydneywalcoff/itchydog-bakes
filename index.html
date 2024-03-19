@@ -19,34 +19,38 @@
         <section class="about-section">
 
         </section>
-        <section class="form d-flex justify-content-center">
-            <div class="form-container w-50">
-                <form action="" class="d-flex flex-column">
+        <section class="form-section d-flex justify-content-center">
+            <div class="form-container">
+                <h2>Liba Cookies <br>Interest Form</h2>
+                <form action="" class="d-flex flex-column shadow-sm">
+                    <p class="disclaimer">*This is not an order form.</p>
                     <div class="name-container d-flex flex-column">
-                        <label for="">
+                        <label for="name-input">
                             Name
                         </label>
-                        <input type="text">
+                        <input type="text" id="name-input">
                     </div>
                     <div class="email-container d-flex flex-column">
-                        <label for="">
+                        <label for="email-input">
                             Email
                         </label>
-                        <input type="text">
+                        <input type="text" id="email-input">
                     </div>
                     <div class="qty-container d-flex flex-column">
-                        <label for="">
+                        <label for="dropdown">
                             Quantity
                         </label>
-                        <!-- <input type=""> -->
+                        <div class="dropdown-outer" id="dropdown">
+
+                        </div>
                     </div>
                     <div class="etc-container d-flex flex-column">
-                        <label for="">
+                        <label for="other-textbox">
                             Anything Else? <span class="d-i">(any allergies, etc)</span>
                         </label>
-                        <textarea></textarea>
+                        <textarea id="other-textbox"></textarea>
                     </div>
-                    
+                    <button class="shadow-sm">Submit</button>
                 </form>
             </div>
         </section>

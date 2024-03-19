@@ -1,6 +1,12 @@
+:root {
+    --teal: #2A9D8F;
+    --navy: #264653;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 img {
@@ -19,4 +25,66 @@ header {
 
 header .logo img {
     max-width: 200px;
+}
+
+.form-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 44px;
+}
+
+form {
+    padding: 24px 52px 52px;
+    border: 4px solid var(--teal);
+    border-radius: 70px;
+    color: var(--navy);
+}
+
+form .disclaimer {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+form label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+form button {
+    margin-top: 24px;
+}
+
+form>div {
+    margin-bottom: 32px;
+}
+
+form input {
+    height: 52px;
+    border-radius: 70px;
+    border: 2px solid var(--navy);
+    padding: 0 12px;
+}
+
+form button {
+    height: 70px;
+    background-color: var(--teal);
+    border-radius: 70px;
+    color: #fff;
+    font-size: 44px;
+    font-weight: 500;
+    border: none;
+}
+
+form textarea {
+    border: 2px solid var(--navy);
+    border-radius: 40px;
+    height: 164px;
+    padding: 12px;
 }
