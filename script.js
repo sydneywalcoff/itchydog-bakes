@@ -35,6 +35,32 @@ function generateErrorMessaging(vals) {
     $('form .error').text(errorText)
 }
 
+function handleErrorResolution(fixedVal) {
+    let errorText = $('form .error').text().split(' ');
+    let newText = ''
+    if(errorText.length !== 5) {
+        if(fixedVal === 'name') {
+            newText = 'email is a required field';
+        } else {
+            newText = 'name is a required field';
+        }
+    }
+    $('form .error').text(newText);
+}
+
+$('#name-input').on('blur', function() {
+    if($(this).val().length && $('form .error').text()) {
+        let val  = $(this).attr('id').split('-')[0];
+        handleErrorResolution(val);
+    }
+})
+$('#email-input').on('blur', function() {
+    if($(this).val().length && $('form .error').text()) {
+        let val  = $(this).attr('id').split('-')[0];
+        handleErrorResolution(val);
+    }
+})
+
 // gather formData 
 function gatherFormData() {
     const emptyVals = [];
@@ -66,5 +92,4 @@ $('#submit-btn').on('click', function (e) {
     e.preventDefault();
     const formData = gatherFormData();
 
-    // error messaging if missing required fields
 })
