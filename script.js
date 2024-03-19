@@ -13,7 +13,7 @@ function handleRadioBtnChange() {
     $(this).attr('aria-checked', 'true');
 }
 
-$('.radio-btn').click(handleRadioBtnChange);
+$('.radio-btn').on('click', handleRadioBtnChange);
 
 
 // submit btn functionality
