@@ -25,6 +25,29 @@ function handleRadioBtnChange() {
 
 $('.radio-btn').on('click', handleRadioBtnChange);
 
+// gather formData 
+function gatherFormData() {
+    const name = $('#name-input').val();
+    const email = $('#email-input').val();
+    const other = $('#other-textbox').val();
+    const shippingOrPickup = $('#shipping-btn').attr('aria-checked') == 'true' ? 'shipping' : 'pickup' ;
+    const selectedQty = $('#dropdown .selected .option').text();
+
+    return {
+        name,
+        email,
+        other, 
+        shippingOrPickup,
+        selectedQty
+    }
+}
+
 
 // submit btn functionality
+$('#submit-btn').on('click', function(e){
+    e.preventDefault();
+    const formData = gatherFormData();
+
+    console.log(formData)
     // error messaging if missing required fields
+})
