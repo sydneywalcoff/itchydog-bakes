@@ -185,3 +185,12 @@ form .radio-btn-container .radio-btn.active::after {
     border-radius: 50px;
     border: 8px solid var(--teal)
 }
+
+/* form error text */
+
+form .error {
+    color: #c60303;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 18px;
+}
