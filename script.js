@@ -6,6 +6,14 @@
 
 
 // radio btn functionality
+function handleRadioBtnChange() {
+    $('.radio-btn.active').attr('aria-checked', 'false');
+    $('.radio-btn.active').removeClass('active');
+    $(this).addClass('active')
+    $(this).attr('aria-checked', 'true');
+}
+
+$('.radio-btn').click(handleRadioBtnChange);
 
 
 // submit btn functionality
