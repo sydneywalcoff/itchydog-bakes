@@ -113,8 +113,19 @@ form span {
     font-weight: 500;
 }
 
+/* radio btns */
+form .radio-btn-container {
+    padding: 0 24px;
+}
 
 form .radio-btn-container label {
     display: flex;
     flex-direction: column;
+}
+
+form .radio-btn-container .radio-btn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--navy);
+    border-radius: 50px;
 }
