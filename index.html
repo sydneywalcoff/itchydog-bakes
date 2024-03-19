@@ -26,7 +26,7 @@
             <div class="form-container">
                 <h2>Liba Cookies <br>Interest Form</h2>
                 <form action="" class="d-flex flex-column shadow-sm">
-                    <p class="disclaimer">*This is not an order form.</p>
+                    <p class="disclaimer">*This is not an order form. <br> <span>I will confirm your order over email</span></p>
                     <div class="name-container d-flex flex-column">
                         <label for="name-input">
                             Name
@@ -56,17 +56,17 @@
                     </div>
                     <div class="radio-btn-container d-flex justify-content-between">
                         <div class="pickup-btn-container d-flex">
-                            <div class="radio-btn" id="pickup-btn"></div>
+                            <div class="radio-btn active" id="pickup-btn" tabindex="0" aria-checked="true"></div>
                             <label for="pickup-btn">Pickup <span>(in Echo Park)</span></label>
                         </div>
                         <div class="shipping-btn-container d-flex">
-                            <div class="radio-btn" id="shipping-btn"></div>
+                            <div class="radio-btn" id="shipping-btn" tabindex="0" aria-checked="false"></div>
                             <label for="shipping-btn">Shipping <span>(+$5)</span></label>
                         </div>
                     </div>
                     <div class="etc-container d-flex flex-column">
                         <label for="other-textbox">
-                            Anything else? <span class="d-i">(any allergies, etc)</span>
+                            Anything else? <span>(any allergies, etc)</span>
                         </label>
                         <textarea id="other-textbox"></textarea>
                     </div>

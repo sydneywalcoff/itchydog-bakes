@@ -47,6 +47,8 @@ form .disclaimer {
     margin-bottom: 24px;
 }
 
+form .disclaimer span { font-size: 16px }
+
 form label {
     font-size: 24px;
     font-weight: bold;
@@ -104,6 +106,7 @@ form .dropdown-outer .arrow {
     border-bottom: 20px solid var(--teal);
 }
 
+/* smaller font text */
 form span {
     font-size: 24px;
     font-weight: 500;
@@ -122,6 +125,18 @@ form .radio-btn-container label {
 form .radio-btn-container .radio-btn {
     width: 44px;
     height: 44px;
-    border: 1px solid var(--navy);
+    border: 2px solid var(--navy);
     border-radius: 50px;
+    position: relative;
+}
+
+form .radio-btn-container .radio-btn.active::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    border: 8px solid var(--teal)
 }
