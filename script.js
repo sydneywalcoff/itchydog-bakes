@@ -3,7 +3,6 @@
 
 // dropdown functionality
 function toggleDropdown() {
-    // arrow flips down
     $('#dropdown').toggleClass('open')
 }
 
@@ -33,7 +32,6 @@ function generateErrorMessaging(vals) {
     } else {
         errorText = `${vals[0]} and ${vals[1]} are required fields`;
     }
-
     $('form .error').text(errorText)
 }
 
