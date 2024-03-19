@@ -8,8 +8,9 @@ function toggleDropdown() {
 }
 
 function handleQtySelection() {
-    console.log($(this).text())
-}
+    const selectedQtyText = $(this).text();
+    $('#dropdown .selected .option').text(selectedQtyText);
+};
 
 $('#dropdown').on('click', toggleDropdown);
 $('#dropdown .options .option').on('click', handleQtySelection)
