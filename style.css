@@ -26,6 +26,7 @@ header .logo img {
 .form-container {
     max-width: 600px;
     width: 100%;
+    margin: 0 24px;
 }
 
 .form-container h2 {
@@ -193,4 +194,18 @@ form .error {
     text-align: center;
     margin-top: 12px;
     font-size: 18px;
+}
+
+
+@media screen and (max-width: 767px) {
+    form {
+        padding: 24px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    form {
+        padding: 16px;
+    }
 }
