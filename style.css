@@ -26,6 +26,7 @@ header .logo img {
 .form-container {
     max-width: 600px;
     width: 100%;
+    margin: 0 24px;
 }
 
 .form-container h2 {
@@ -59,8 +60,12 @@ form button {
     margin-top: 24px;
 }
 
-form>div {
+form .form-content>div {
     margin-bottom: 32px;
+}
+
+form .success-content {
+    display: none;
 }
 
 form input,
@@ -193,4 +198,52 @@ form .error {
     text-align: center;
     margin-top: 12px;
     font-size: 18px;
+}
+
+/* successful email sent */
+form.success {
+    padding: 24px;
+}
+
+form.success .form-content {
+    display: none !important;
+}
+
+form.success .success-content {
+    display: block;
+    text-align: center;
+    color: var(--navy);
+    font-size: 32px;
+    font-weight: 600
+}
+
+@media screen and (max-width: 767px) {
+    .form-container h2 {
+        font-size: 36px;
+    }
+
+    form {
+        padding: 24px;
+    }
+    
+
+}
+
+@media screen and (max-width: 530px) {
+    /* small font */
+    form span {
+        display: block;
+        font-size: 20px;
+    }
+
+    /* successful email sent */
+    form.success .success-content {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    form {
+        padding: 16px;
+    }
 }
