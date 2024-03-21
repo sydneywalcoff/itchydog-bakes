@@ -198,10 +198,23 @@ form .error {
 
 
 @media screen and (max-width: 767px) {
+    .form-container h2 {
+        font-size: 36px;
+    }
+
     form {
         padding: 24px;
     }
+    
 
+}
+
+@media screen and (max-width: 530px) {
+    /* small font */
+    form span {
+        display: block;
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 375px) {
