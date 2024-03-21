@@ -60,7 +60,7 @@ form button {
     margin-top: 24px;
 }
 
-form>div {
+form .form-content>div {
     margin-bottom: 32px;
 }
 
@@ -196,6 +196,21 @@ form .error {
     font-size: 18px;
 }
 
+/* successful email sent */
+form.success {
+    padding: 24px;
+}
+
+form.success .form-content {
+    display: none !important;
+}
+
+form.success .success-content {
+    text-align: center;
+    color: var(--navy);
+    font-size: 32px;
+    font-weight: 600
+}
 
 @media screen and (max-width: 767px) {
     .form-container h2 {
@@ -214,6 +229,11 @@ form .error {
     form span {
         display: block;
         font-size: 20px;
+    }
+
+    /* successful email sent */
+    form.success .success-content {
+        font-size: 24px;
     }
 }
 
