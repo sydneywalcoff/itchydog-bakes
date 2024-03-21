@@ -107,7 +107,7 @@ $('#submit-btn').on('click', function (e) {
         data: JSON.stringify(data),
         contentType: 'application/json'
     }).done(function () {
-        alert('Your mail is sent!');
+        $('form').addClass('success');
     }).fail(function (error) {
         alert('Oops... ' + JSON.stringify(error));
     });
