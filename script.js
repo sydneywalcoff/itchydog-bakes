@@ -71,8 +71,7 @@ function gatherFormData() {
     const other = $('#other-textbox').val();
     const shippingOrPickup = $('#shipping-btn').attr('aria-checked') == 'true' ? 'shipping' : 'pickup';
     const selectedQty = $('#dropdown .selected .option').text();
-
-    if (emptyVals) {
+    if (emptyVals.length) {
         generateErrorMessaging(emptyVals);
         return {};
     }
@@ -91,5 +90,5 @@ function gatherFormData() {
 $('#submit-btn').on('click', function (e) {
     e.preventDefault();
     const formData = gatherFormData();
-
+    console.log(formData)
 })
